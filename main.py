@@ -11,3 +11,13 @@ import math
 #Variable for storing calculation till the end
 history = []
 
+#Rectangle Calulations
+def rectangle():
+  print("Please Enter Dimensions")
+  l=int(input("Length : "))
+  w=int(input("Width : "))
+  area=l*w
+  perimeter=2*(l+w)
+  print("Area of Rectangle : ",area)
+  print("Perimeter of Rectangle : ",perimeter)
+  
