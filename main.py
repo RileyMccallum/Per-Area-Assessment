@@ -20,4 +20,5 @@ def rectangle():
   perimeter=2*(l+w)
   print("Area of Rectangle : ",area)
   print("Perimeter of Rectangle : ",perimeter)
-  
+#woking
+def 
