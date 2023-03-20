@@ -11,61 +11,70 @@ import math
 
 history = []
 
-#Recatangle Ca;culations w/ f-string
+#Welcome Message
+print("\033[95mHello! Welcome to the Perimeter and Area Calculator. \nThis Program can calculate the perimeter and area to any of the following shapes:\033[0m")
+
+#Recatangle Calculations w/ f-string
 def rectangle():
-    print("Enter the dimensions of the rectangle:")
-    length = float(input("Length: "))
-    width = float(input("Width: "))
+    print("\nEnter the dimensions of the rectangle:")
+    length = float(input("\033[96mLength: \033[0m"))
+    width = float(input("\033[96mWidth: \033[0m"))
     area = length * width
     perimeter = 2 * length + 2 * width
-    print(f"Area: {area}")
-    print(f"Perimeter: {perimeter}")
-    history.append(f"Rectangle with length={length} and width={width}: Area={area}, Perimeter={perimeter}")
+    print(f"\nArea: {area}")
+    print(f"Perimeter: {perimeter}\n")
+#History code for rectangles
+    history.append(f"Rectangle with length={length} and width={width}: \nArea={area}, Perimeter={perimeter}\n")
 
-#Circle Calculations
+#Circle Calculations1
 def circle():
-    print("Enter the dimensions of the circle:")
-    radius = float(input("Radius: "))
+    print("\nEnter the dimensions of the circle:")
+    radius = float(input("\033[96mRadius: \033[0m"))
     area = math.pi * radius ** 2
     circumference = 2 * math.pi * radius
-    print(f"Area: {area}")
-    print(f"Circumference: {circumference}")
-    history.append(f"Circle with radius={radius}: Area={area}, Circumference={circumference}")
+    print(f"\nArea: {area}")
+    print(f"Circumference: {circumference}\n")
+#History code for circles
+    history.append(f"Circle with radius={radius}: Area={area}, \nCircumference={circumference}\n")
 
 #Triangle Calculations
 def triangle():
-    print("Enter the dimensions of the triangle:")
-    base = float(input("Base: "))
-    height = float(input("Height: "))
-    side1 = float(input("Side 1: "))
-    side2 = float(input("Side 2: "))
+    print("\nEnter the dimensions of the triangle:")
+    base = float(input("\033[96mBase: \033[0m"))
+    height = float(input("\033[96mHeight: \033[0m"))
+    side1 = float(input("\033[96mSide 1: \033[0m"))
+    side2 = float(input("\033[96mSide 2: \033[0m"))
     area = 0.5 * base * height
     perimeter = base + side1 + side2
-    print(f"Area: {area}")
-    print(f"Perimeter: {perimeter}")
-    history.append(f"Triangle with base={base}, height={height}, side1={side1}, side2={side2}: Area={area}, Perimeter={perimeter}")
+    print(f"\nArea: {area}")
+    print(f"Perimeter: {perimeter}\n")
+#History code for Triangles
+    history.append(f"Triangle with base={base}, height={height}, side1={side1}, \nside2={side2}: Area={area}, Perimeter={perimeter}\n")
 
 #Parallelogram Calculations
 def parallelogram():
-    print("Enter the dimensions of the parallelogram:")
-    base = float(input("Base: "))
-    height = float(input("Height: "))
-    side = float(input("Side: "))
+    print("\nEnter the dimensions of the parallelogram:")
+    base = float(input("\033[96mBase: \033[0m"))
+    height = float(input("\033[96mHeight: \033[0m"))
+    side = float(input("\033[96mSide: \033[0m"))
     area = base * height
     perimeter = 2 * base + 2 * side
-    print(f"Area: {area}")
-    print(f"Perimeter: {perimeter}")
-    history.append(f"Parallelogram with base={base}, height={height}, side={side}: Area={area}, Perimeter={perimeter}")
+    print(f"\nArea: {area}")
+    print(f"Perimeter: {perimeter}\n")
+#History code for Parallelograms
+    history.append(f"Parallelogram with base={base}, height={height}, \nside={side}: Area={area}, Perimeter={perimeter}\n")
 
+#User Experience
 while True:
-    print("Choose a shape:")
+    print("\n\033[91mPlease choose a shape:\033[0m")
     print("1. Rectangle")
     print("2. Circle")
     print("3. Triangle")
     print("4. Parallelogram")
     print("5. Show history")
     print("6. Quit")
-    choice = input("Enter choice (1-6): ")
+  #User Input Outcomes
+    choice = input("\033[94mEnter choice (1-6): \033[0m")
     if choice == '1':
         rectangle()
     elif choice == '2':
@@ -75,10 +84,11 @@ while True:
     elif choice == '4':
         parallelogram()
     elif choice == '5':
-        print("Session history:")
+        print("\n\033[93mSession history:\033[0m")
         for item in history:
             print(item)
     elif choice == '6':
         break
     else:
-        print("Invalid choice. Try again.")
+        print("\033[\n92mSorry, this is not a valid choice. Please try again.\n\033[0m")
+      
