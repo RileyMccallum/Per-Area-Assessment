@@ -14,7 +14,9 @@ import os
 history = []
 
 #Welcome Message
+print("*" * 90)
 print("\033[95mHello! Welcome to the Perimeter and Area Calculator. \nThis Program can calculate the perimeter and area to any of the following shapes:\033[0m")
+print("*" * 90)
 
 #Recatangle Calculations w/ f-string
 def rectangle():
@@ -82,7 +84,7 @@ while True:
     print("7. Quit")
   
 #User Input Outcomes
-    choice = input("\033[94mEnter choice (1-6): \033[0m")
+    choice = input("\033[94mEnter choice (1-7): \033[0m")
     if choice == '1':
         rectangle()
     elif choice == '2':
@@ -101,4 +103,3 @@ while True:
         break
     else:
         print("\033[\n92mSorry, this is not a valid choice. Please try again.\n\033[0m")
-      
