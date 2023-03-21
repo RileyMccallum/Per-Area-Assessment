@@ -9,6 +9,8 @@
 #Basic starting stuff
 import math
 
+import os
+
 history = []
 
 #Welcome Message
@@ -64,6 +66,10 @@ def parallelogram():
 #History code for Parallelograms
     history.append(f"Parallelogram with base={base}, height={height}, \nside={side}: Area={area}, Perimeter={perimeter}\n")
 
+#Console Clearing
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear')
+  
 #User Experience
 while True:
     print("\n\033[91mPlease choose a shape:\033[0m")
@@ -72,8 +78,10 @@ while True:
     print("3. Triangle")
     print("4. Parallelogram")
     print("5. Show history")
-    print("6. Quit")
-  #User Input Outcomes
+    print("6. Clear Console")
+    print("7. Quit")
+  
+#User Input Outcomes
     choice = input("\033[94mEnter choice (1-6): \033[0m")
     if choice == '1':
         rectangle()
@@ -88,6 +96,8 @@ while True:
         for item in history:
             print(item)
     elif choice == '6':
+        clear_console()
+    elif choice == '7':
         break
     else:
         print("\033[\n92mSorry, this is not a valid choice. Please try again.\n\033[0m")
