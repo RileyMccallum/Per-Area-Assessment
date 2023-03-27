@@ -15,8 +15,6 @@ def rectangle():
     print("\nEnter the dimensions of the rectangle:")
     length = get_integer_input("\033[96mLength: \033[0m")
     width = get_integer_input("\033[96mWidth: \033[0m")
-    length = get_integer_input(length)
-    width = get_integer_input(width)
     area = length * width
     perimeter = 2 * length + 2 * width
     print(f"\nArea: {area}")
