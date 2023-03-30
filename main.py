@@ -1,23 +1,32 @@
-# Importing required modules
-import os
+'''
+  Name: 
+  James Hargest College
+  Programming Internal for 2.7 & 2.8 ~ 12 credits
+  Due: 6 April 2023
+  
+  TIP: Use assessment guide to help guide you through this Internal
+'''
+#Basic starting stuff
 from Shapes import rectangle, circle, triangle, parallelogram, history
 
-# Clear console function
-def clear_console():
-    os.system('cls' if os.name == 'nt' else 'clear')
+import os
 
-# Clear history function
-def clear_history():
-    global history
-    history = []
-    print("\n\033[93mHistory Cleared\033[0m")
-
-# Welcome message
+#Welcome Message
 print("*" * 90)
 print("\033[95mHello! Welcome to the Perimeter and Area Calculator. \nThis Program can calculate the perimeter and area to any of the following shapes:\033[0m")
 print("*" * 90)
 
-# User interface
+#Console Clearing
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+#History Clearing
+def clear_history():
+  global history
+  history = []
+  print("\n\033[93mHistory Cleared\033[0m")
+  
+#User Experience
 while True:
     print("\n\033[91mPlease choose a shape:\033[0m")
     print("1. Rectangle")
@@ -28,8 +37,8 @@ while True:
     print("6. Clear Console")
     print("7. Clear History")
     print("8. Quit")
-
-    # User input outcomes
+  
+#User Input Outcomes
     choice = input("\033[94mEnter choice (1-8): \033[0m")
     if choice == '1':
         rectangle()
