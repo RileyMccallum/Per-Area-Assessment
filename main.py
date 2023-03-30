@@ -12,9 +12,9 @@ from Shapes import rectangle, circle, triangle, parallelogram, history
 import os
 
 #Welcome Message
-print("*" * 90)
+print("\033[94m*\033[0m" * 90)
 print("\033[95mHello! Welcome to the Perimeter and Area Calculator. \nThis Program can calculate the perimeter and area to any of the following shapes:\033[0m")
-print("*" * 90)
+print("\033[94m*\033[0m" * 90)
 
 #Console Clearing
 def clear_console():
@@ -22,9 +22,12 @@ def clear_console():
 
 #History Clearing
 def clear_history():
-  global history
-  history = []
-  print("\n\033[93mHistory Cleared\033[0m")
+    global history
+    if history:
+        history = []
+        print("\n\033[93mHistory Cleared\033[0m")
+    else:
+        print("\n\033[93mNo History Yet\033[0m")
   
 #User Experience
 while True:
