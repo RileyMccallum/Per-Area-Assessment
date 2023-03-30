@@ -49,8 +49,11 @@ while True:
     elif choice == '4':
         parallelogram()
     elif choice == '5':
+      if not history:
+        print("\n\033[93mNo History Yet\033[0m\n")
+      else:
         print("\n\033[93mSession history:\033[0m")
-        for item in history:
+      for item in history:
             print(item)
     elif choice == '6':
         clear_console()
