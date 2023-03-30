@@ -8,7 +8,7 @@ def get_integer_input(prompt):
             value = int(input(prompt))
             return value
         except ValueError:
-            print("\033[31mInvalid input. Please enter an integer.\033[0m")
+            print("\033[31mSorry. Invalid input. Please enter an integer:\033[0m")
           
 #Recatangle Calculations w/ f-string
 def rectangle():
