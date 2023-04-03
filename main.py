@@ -36,6 +36,7 @@ while True:
     print("2. Circle")
     print("3. Triangle")
     print("4. Parallelogram")
+#Continued User Experience
     print("5. Show history")
     print("6. Clear Console")
     print("7. Clear History")
@@ -51,6 +52,7 @@ while True:
         triangle()
     elif choice == '4':
         parallelogram()
+#Continued Input Outcomes
     elif choice == '5':
       if not history:
         print("\n\033[93mNo History Yet\033[0m\n")
@@ -63,6 +65,9 @@ while True:
     elif choice == '7':
         clear_history()
     elif choice == '8':
-        break
+      print("\033[94m*\033[0m" * 80)
+      print("\033[95mExiting Program. Thanks for using the Perimeter and Area Calculator calculator!\033[0m")
+      print("\033[94m*\033[0m" * 80)
+      break
     else:
         print("\033[\n92mSorry, this is not a valid choice. Please try again.\n\033[0m")

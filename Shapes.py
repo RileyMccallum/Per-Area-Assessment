@@ -2,6 +2,7 @@
 history = []
 import math
 
+#Continued Starting Stuff
 def get_integer_input(prompt):
     while True:
         try:
@@ -22,7 +23,7 @@ def rectangle():
 #History code for rectangles
     history.append(f"Rectangle with length={length} and width={width}: \nArea={area}, Perimeter={perimeter}\n")
 
-#Circle Calculations1
+#Circle Calculations w/ f-string
 def circle():
     print("\nEnter the dimensions of the circle:")
     radius = get_integer_input("\033[96mRadius: \033[0m")
@@ -33,7 +34,7 @@ def circle():
 #History code for circles
     history.append(f"Circle with radius={radius}: Area={area}, \nCircumference={circumference}\n")
 
-#Triangle Calculations
+#Triangle Calculations w/ f-string
 def triangle():
     print("\nEnter the dimensions of the triangle:")
     base = get_integer_input("\033[96mBase: \033[0m")
@@ -47,7 +48,7 @@ def triangle():
 #History code for Triangles
     history.append(f"Triangle with base={base}, height={height}, side1={side1}, \nside2={side2}: Area={area}, Perimeter={perimeter}\n")
 
-#Parallelogram Calculations
+#Parallelogram Calculations w/ f-string
 def parallelogram():
     print("\nEnter the dimensions of the parallelogram:")
     base = get_integer_input("\033[96mBase: \033[0m")
