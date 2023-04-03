@@ -20,8 +20,6 @@ print("\033[94m*\033[0m" * 90)
 def clear_console():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-
-  #Testing Git
 #History Clearing
 def clear_history():
     global history
